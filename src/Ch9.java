@@ -18,22 +18,19 @@ public class Ch9 {
                 name = setName;
             }
 
-            public String setSymbol() { //returns the symbol as str
+            public String getSymbol() { //returns the symbol as str
                 return symbol;
             }
-            public String setName() { //returns name as str
+
+            public String getName() { //returns name as str
                 return name;
             }
-            public double setCurrentPrice() { //returns the current price as a double
-                return currentPrice;
-            }
-            public double setPreviousClosingPrice() { //returns previous price as double
-                return previousClosingPrice;
+            public double setPreviousClosingPrice(double previousClosingPrice) {
+                return this.previousClosingPrice = previousClosingPrice;
             }
 
-            public void setCurrentPrice(double currentPrice) {
-                this.previousClosingPrice = this.currentPrice;
-                this.currentPrice = currentPrice;
+            public double setCurrentPrice(double currentPrice) {
+                return this.currentPrice = currentPrice;
             }
 
             public double getChangePercent() { //method getChangePercent
@@ -42,19 +39,13 @@ public class Ch9 {
         }
 
         //Example code
+
         Stock example = new Stock("ORCL","Oracle Corporation"); //symbol="ORCL" and name="Oracle Corporation"
-        example.setCurrentPrice(34.5);
-        example.setCurrentPrice(34.35);
-        System.out.println("Stock name: " + example.setName() + " Symbol: " + example.setSymbol());
-        System.out.println("Previous price: " + example.setPreviousClosingPrice());
-        System.out.println("Current price: " + example.setCurrentPrice());
+
+        System.out.println("Stock name: " + example.getName() + " Symbol: " + example.getSymbol());
+        System.out.println("Previous Price:" +example.setPreviousClosingPrice(34.5));
+        System.out.println("Current Price:" + example.setCurrentPrice(34.35));
 
         System.out.println("Percent changed: " +example.getChangePercent()+" %");
-
     }
 }
-
-
-
-
-
