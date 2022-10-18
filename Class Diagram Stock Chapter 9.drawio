@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-18T17:42:14.366Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="jygDB7NGm79sSGoT3BfQ" version="20.4.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-18T17:46:59.974Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="gpZtUHsTGCET8znbc4Uj" version="20.4.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -66,6 +66,9 @@
         </mxCell>
         <mxCell id="CVuEDkvlk7afERo4JCGG-25" value="+ str symbol is the companies symbol&lt;br&gt;+ str name is the companies name&lt;br&gt;+double previousClosingPrice is th&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;e t&lt;span style=&quot;font-family: ui-monospace, SFMono-Regular, &amp;quot;SF Mono&amp;quot;, Menlo, Consolas, &amp;quot;Liberation Mono&amp;quot;, monospace;&quot;&gt;he stock price for the previous day&lt;br&gt;+double currentPrice is the stock price for the current day&lt;br&gt;&lt;/span&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontFamily=Helvetica;fontColor=#000000;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="550" y="130" width="270" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="CVuEDkvlk7afERo4JCGG-28" value="&lt;pre style=&quot;background-color:#2b2b2b;color:#a9b7c6;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9.8pt;&quot;&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//Ashley Grafner&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//CSC 10606080, Computer Science 1 (Java)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//10/17/2022&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;/*Write a test program that creates a Stock object with the stock symbol ORCL , the name&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;Oracle Corporation , and the previous closing price of 34.5 . Set a new current&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;price to 34.35 and display the price-change percentage */&lt;/span&gt;&lt;/pre&gt;" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="184" y="550" width="460" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
