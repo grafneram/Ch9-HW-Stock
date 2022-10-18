@@ -10,15 +10,14 @@ public class Ch9 {
         class Stock { //class name Stock
             String symbol; //str data field = symbol
             String name; // str data  field = name
+            double previousClosingPrice; // The stock price for the previous day
+            double currentPrice; // The stock price for the current time
 
-            double previousClosingPrice; //double data field = previousClosingPrice
-            double currentPrice; //double data field = currentPrice
-
-
-            public Stock(String symbol, String name) { //constructor, creates a stock with symbol and name
-                this.symbol = symbol;
-                this.name = name;
+            public Stock(String setSymbol, String setName) { //construct
+                symbol = setSymbol;
+                name = setName;
             }
+
             public String setSymbol() { //returns the symbol as str
                 return symbol;
             }
@@ -28,10 +27,9 @@ public class Ch9 {
             public double setCurrentPrice() { //returns the current price as a double
                 return currentPrice;
             }
-            public double setPreviousClosingPrice() {
+            public double setPreviousClosingPrice() { //returns previous price as double
                 return previousClosingPrice;
             }
-
 
             public void setCurrentPrice(double currentPrice) {
                 this.previousClosingPrice = this.currentPrice;
@@ -39,20 +37,19 @@ public class Ch9 {
             }
 
             public double getChangePercent() { //method getChangePercent
-                return (currentPrice - previousClosingPrice) / previousClosingPrice; // finds the percent changed
+                return (currentPrice - previousClosingPrice) / previousClosingPrice *100 ; // finds the percent changed
             }
         }
 
-
-
         //Example code
-        Stock stockExample = new Stock("ORCL","Oracle Corporation"); //symbol="ORCL" and name="Oracle Corporation"
-        stockExample.setCurrentPrice(34.5);
-        stockExample.setCurrentPrice(34.35);
-        System.out.println("Stock name: " + stockExample.setName() + " Symbol: " + stockExample.setSymbol());
-        System.out.println("Previous price: " + stockExample.setPreviousClosingPrice());
-        System.out.println("Current price: " + stockExample.setCurrentPrice());
-        System.out.println("Percent changed: " +stockExample.getChangePercent());
+        Stock example = new Stock("ORCL","Oracle Corporation"); //symbol="ORCL" and name="Oracle Corporation"
+        example.setCurrentPrice(34.5);
+        example.setCurrentPrice(34.35);
+        System.out.println("Stock name: " + example.setName() + " Symbol: " + example.setSymbol());
+        System.out.println("Previous price: " + example.setPreviousClosingPrice());
+        System.out.println("Current price: " + example.setCurrentPrice());
+
+        System.out.println("Percent changed: " +example.getChangePercent()+" %");
 
     }
 }
