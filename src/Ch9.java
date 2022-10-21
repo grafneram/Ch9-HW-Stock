@@ -8,44 +8,65 @@ price to 34.35 and display the price-change percentage */
 public class Ch9 {
     public static void main(String[] args) { //main method
         class Stock { //class name Stock
-            String symbol; //str data field = symbol
-            String name; // str data  field = name
-            double previousClosingPrice; // The stock price for the previous day
-            double currentPrice; // The stock price for the current time
-
+            private String symbol; //str data field = symbol
+            private String name; // str data  field = name
+            private double previousClosingPrice; // The stock price for the previous day
+            private double currentPrice; // The stock price for the current time
             public Stock(String setSymbol, String setName) { //construct
-                symbol = setSymbol;
-                name = setName;
+                this.symbol = setSymbol;
+                this.name = setName;
+                this.previousClosingPrice = 0;
+                this.currentPrice = 0;
+            }
+            public Stock(String setSymbol, String setName, double setPreviousClosingPrice, double setCurrentPrice) { //construct
+                this.symbol = setSymbol;
+                this.name = setName;
+                this.previousClosingPrice = setPreviousClosingPrice;
+                this.currentPrice = setCurrentPrice;
+                //explicit setters
             }
 
-            public String getSymbol() { //returns the symbol as str
+            public String getSymbol() {
                 return symbol;
             }
+            public void setSymbol(String symbol) {
+                this.symbol = symbol;
+            }
 
-            public String getName() { //returns name as str
+            public String getName() {
                 return name;
             }
-            public double setPreviousClosingPrice(double previousClosingPrice) {
-                return this.previousClosingPrice = previousClosingPrice;
+            public void setName(String name) {
+                this.name = name;
             }
 
-            public double setCurrentPrice(double currentPrice) {
-                return this.currentPrice = currentPrice;
+            public double getPreviousClosingPrice() {
+                return previousClosingPrice;
+            }
+            public void setPreviousClosingPrice(double previousClosingPrice) {
+                this.previousClosingPrice = previousClosingPrice;
+            }
+
+            public double getCurrentPrice() {
+                return currentPrice;
+            }
+            public void setCurrentPrice(double currentPrice) {
+                this.currentPrice = currentPrice;
             }
 
             public double getChangePercent() { //method getChangePercent
                 return (currentPrice - previousClosingPrice) / previousClosingPrice *100 ; // finds the percent changed
             }
         }
+        //Example code:
+        Stock ORCLStock = new Stock("ORCL", "Oracle Corporation", 34.5, 34.35);
+        Stock YAHOOStock = new Stock("YAHOO", "Yahoo", 34.5, 34.35);
 
-        //Example code
+        System.out.println("Stock name: " + ORCLStock.getName());
+        System.out.println("Symbol: " + ORCLStock.getSymbol());
+        System.out.println("Previous Price: " +ORCLStock.getPreviousClosingPrice());
+        System.out.println("Current Price: " + ORCLStock.getCurrentPrice());
 
-        Stock example = new Stock("ORCL","Oracle Corporation"); //symbol="ORCL" and name="Oracle Corporation"
-
-        System.out.println("Stock name: " + example.getName() + " Symbol: " + example.getSymbol());
-        System.out.println("Previous Price:" +example.setPreviousClosingPrice(34.5));
-        System.out.println("Current Price:" + example.setCurrentPrice(34.35));
-
-        System.out.println("Percent changed: " +example.getChangePercent()+" %");
+        System.out.println("The percent change is " + ORCLStock.getChangePercent() + "%");
     }
 }
